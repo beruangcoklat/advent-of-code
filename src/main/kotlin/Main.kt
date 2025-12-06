@@ -1,4 +1,5 @@
 import solution.*
+import java.math.BigInteger
 
 fun main() {
     println(Day1().part1() == 1097)
@@ -15,4 +16,7 @@ fun main() {
 
     println(Day5().part1() == 720L)
     println(Day5().part2() == 357608232770687L)
+
+    println(Day6().part1() == BigInteger("4412382293768"))
+    println(Day6().part2() == BigInteger("7858808482092"))
 }
