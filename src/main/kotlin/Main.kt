@@ -19,4 +19,7 @@ fun main() {
 
     println(Day6().part1() == BigInteger("4412382293768"))
     println(Day6().part2() == BigInteger("7858808482092"))
+
+    println(Day7().part1() == 1581)
+    println(Day7().part2() == 73007003089792L)
 }
