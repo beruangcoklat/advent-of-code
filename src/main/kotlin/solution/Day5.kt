@@ -71,8 +71,8 @@ class Day5 {
 
     private fun check(a: PointLong, b: PointLong) {
         if (a.y >= b.x) {
-            b.y = Math.max(a.y, b.y)
-            b.x = Math.min(a.x, b.x)
+            b.y = a.y.coerceAtLeast(b.y)
+            b.x = a.x.coerceAtMost(b.x)
             a.setToEmpty()
         }
     }

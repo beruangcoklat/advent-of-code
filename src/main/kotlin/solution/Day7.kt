@@ -38,7 +38,7 @@ class Day7 {
         val rows = mutableListOf<CharArray>()
         inputFile.forEachLine { rows.add(it.toCharArray()) }
 
-        var initialX = rows[0].indexOf('S')
+        val initialX = rows[0].indexOf('S')
         return solvePart2(Point(initialX, 0), rows)
     }
 
@@ -48,9 +48,7 @@ class Day7 {
             return cacheValue
 
         val sp = move(curr, rows) ?: return 1
-        val result = if (sp != null) {
-            listOf(-1, 1).map { solvePart2(Point(sp.x + it, sp.y), rows) }.sum()
-        } else 1
+        val result = listOf(-1, 1).sumOf { solvePart2(Point(sp.x + it, sp.y), rows) }
         cache[curr] = result
         return result
     }

@@ -38,7 +38,7 @@ class Day6 {
         var maxX = 0
         inputFile.forEachLine { line ->
             rows.add(line)
-            maxX = Math.max(maxX, line.length)
+            maxX = maxX.coerceAtLeast(line.length)
         }
 
         val operators = rows[rows.size - 1].split(" ").filter { it.isNotBlank() }
@@ -63,9 +63,7 @@ class Day6 {
                 continue
             }
 
-            if (numbers[groupIdx] == null) {
-                numbers[groupIdx] = mutableListOf(number)
-            } else numbers[groupIdx].add(number)
+            numbers[groupIdx].add(number)
         }
 
         for (i in 0 until operators.size) {
