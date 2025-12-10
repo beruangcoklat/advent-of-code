@@ -24,4 +24,5 @@ fun main() {
     println(Day7().part2() == 73007003089792L)
 
     println(Day8().part1() == 352584)
+    println(Day8().part2() == 9617397716L)
 }
